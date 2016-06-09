@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class='title'>
-            <h4><span class='icon-font'>&#xe61a;</span>工作经历 (work experience)</h4>
+            <h4><span class='icon-font'>&#xe61a;</span>工作经历 (Work Experience)</h4>
         </div>
         <div class='panel'>
             <div class='item' v-for='info in work_experience'>

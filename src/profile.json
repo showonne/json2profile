@@ -1,8 +1,10 @@
 {
-    "photo": true,
+    "photo": {
+        "show": true
+    },
     "basic": [{
         "des": "姓名",
-        "val": "showonne"
+        "val": "陈景辉"
     }, {
         "des": "年龄",
         "val": 23
@@ -22,6 +24,9 @@
         "des": "学历",
         "val": "本科"
     }, {
+        "des": "专业",
+        "val": "软件工程"
+    },{
         "des": "联系电话",
         "val": 18106567219
     }, {
@@ -55,5 +60,6 @@
         "大一时加入学生会学习部"
     ],
     "skill": ["HTML", "Css", "Js", "Angular.js"],
-    "selfEvaluation": "我是一个好人 :)"
+    "selfEvaluation": "我是一个好人 :)",
+    "prizeInfo": ["获得过三等奖学金两次"]
 }

@@ -2988,7 +2988,7 @@
 
 
 	// module
-	exports.push([module.id, ".container {\n  width: 75%;\n  margin: 0 auto;\n  padding: 20px 0;\n}\n@media screen and (max-width: 768px) {\n  .container {\n    width: 100%;\n  }\n}\n.header_bar {\n  height: 30px;\n  width: 100%;\n  background: #254667;\n}\n.header_bar .cube {\n  background: #fff;\n  height: 30px;\n  width: 20px;\n  margin-left: 60px;\n}\n.footer_bar {\n  height: 30px;\n  width: 100%;\n  background: #254667;\n  margin-top: 30px;\n}\n.footer_bar .cube {\n  background: #fff;\n  height: 30px;\n  width: 20px;\n  margin-left: calc(100% - 90px);\n}\n", ""]);
+	exports.push([module.id, ".container {\n  width: 75%;\n  margin: 0 auto;\n  padding: 20px 0;\n  overflow: hidden;\n}\n@media screen and (max-width: 768px) {\n  .container {\n    width: 100%;\n  }\n}\n.header_bar {\n  height: 30px;\n  width: 100%;\n  background: #254667;\n}\n.header_bar .cube {\n  background: #fff;\n  height: 30px;\n  width: 2%;\n  margin-left: 2%;\n}\n.footer_bar {\n  height: 30px;\n  width: 100%;\n  background: #254667;\n  margin-top: 30px;\n  position: relative;\n}\n.footer_bar span {\n  position: absolute;\n  color: #fff;\n  left: 50%;\n  top: 50%;\n  -webkit-transform: translate3d(-50%, -50%, 0);\n          transform: translate3d(-50%, -50%, 0);\n  font-weight: 100;\n  font-family: -apple-system, 'Helvetica Neue', Arial;\n  font-size: 18px;\n}\n@media screen and (max-width: 768px) {\n  .footer_bar span {\n    font-size: 14px;\n  }\n}\n.footer_bar a {\n  color: #fff;\n}\n.footer_bar .cube {\n  background: #fff;\n  height: 30px;\n  width: 2%;\n  margin-left: 96%;\n}\n", ""]);
 
 	// exports
 
@@ -3304,9 +3304,13 @@
 
 	var _selfEvaluation2 = _interopRequireDefault(_selfEvaluation);
 
+	var _prizeInfo = __webpack_require__(45);
+
+	var _prizeInfo2 = _interopRequireDefault(_prizeInfo);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	// <template>
+	var profileInfo = __webpack_require__(34); // <template>
 	//     <div class='container'>
 	//         <div class='header_bar'><div class="cube"></div></div>
 	//         <basic :basic='profileInfo.basic' :photo='profileInfo.photo'></basic>
@@ -3314,15 +3318,14 @@
 	//         <work-experience :work_experience='profileInfo.workExperience'></work-experience>
 	//         <school-experience :school_experience='profileInfo.schoolExperience'></school-experience>
 	//         <skill :skill='profileInfo.skill'></skill>
+	//         <prize-info :prize_info='profileInfo.prizeInfo'></prize-info>
 	//         <self-evaluation :self_evaluation='profileInfo.selfEvaluation'></self-evaluation>
-	//         <div class='footer_bar'><div class="cube"></div></div>
+	//         <div class='footer_bar'><span>powered by <a  target='blank' href="https://github.com/showonne/json2profile">json2profile</a></span><div class="cube"></div></div>
 	//     </div>
 	// </template>
 	//
 	// <script>
 
-
-	var profileInfo = __webpack_require__(34);
 
 	exports.default = {
 	    el: '#app',
@@ -3333,7 +3336,7 @@
 	    },
 
 	    components: {
-	        basic: _basic2.default, education: _education2.default, workExperience: _workExperience2.default, schoolExperience: _schoolExperience2.default, skill: _skill2.default, selfEvaluation: _selfEvaluation2.default
+	        basic: _basic2.default, education: _education2.default, workExperience: _workExperience2.default, schoolExperience: _schoolExperience2.default, skill: _skill2.default, selfEvaluation: _selfEvaluation2.default, prizeInfo: _prizeInfo2.default
 	    }
 	};
 	// </script>
@@ -3343,6 +3346,7 @@
 	//         width: 75%
 	//         margin: 0 auto
 	//         padding: 20px 0
+	//         overflow: hidden
 	//         @media screen and (max-width: 768px)
 	//             width: 100%
 	//     .header_bar
@@ -3352,18 +3356,32 @@
 	//         .cube
 	//             background: #fff
 	//             height: 30px
-	//             width: 20px
-	//             margin-left: 60px
+	//             width: 2%
+	//             margin-left: 2%
 	//     .footer_bar
 	//         height: 30px
 	//         width: 100%
 	//         background: #254667
 	//         margin-top: 30px
+	//         position: relative
+	//         span
+	//             position: absolute
+	//             color: #fff
+	//             left: 50%
+	//             top: 50%
+	//             transform: translate3d(-50%, -50%, 0)
+	//             font-weight: 100
+	//             font-family: -apple-system, 'Helvetica Neue', Arial
+	//             font-size: 18px
+	//             @media screen and (max-width: 768px)
+	//                 font-size: 14px
+	//         a
+	//             color: #fff
 	//         .cube
 	//             background: #fff
 	//             height: 30px
-	//             width: 20px
-	//             margin-left: calc(100% - 90px)
+	//             width: 2%
+	//             margin-left: 96%
 	// </style>
 
 /***/ },
@@ -3430,7 +3448,7 @@
 
 
 	// module
-	exports.push([module.id, ".panel[_v-2dea2c39] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: row wrap;\n      flex-flow: row wrap;\n  position: relative;\n}\n.panel .infos[_v-2dea2c39] {\n  width: 50%;\n  margin: 4px 0;\n}\n.panel .infos label[_v-2dea2c39] {\n  font-size: 20px;\n}\n.panel .infos span[_v-2dea2c39] {\n  font-size: 20px;\n}\n.panel .photo[_v-2dea2c39] {\n  height: 100px;\n  width: 100px;\n  position: absolute;\n  right: 0;\n  top: -80px;\n  border-radius: 50%;\n  overflow: hidden;\n}\n.panel .photo img[_v-2dea2c39] {\n  max-width: 100%;\n  max-height: 100%;\n}\n", ""]);
+	exports.push([module.id, ".panel[_v-2dea2c39] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-flow: row wrap;\n      flex-flow: row wrap;\n  position: relative;\n}\n@media screen and (max-width: 768px) {\n  .panel[_v-2dea2c39] {\n    -ms-flex-flow: column;\n        flex-flow: column;\n  }\n}\n.panel .infos[_v-2dea2c39] {\n  width: 50%;\n  margin: 4px 0;\n}\n@media screen and (max-width: 768px) {\n  .panel .infos[_v-2dea2c39] {\n    width: 100%;\n  }\n}\n.panel .infos label[_v-2dea2c39] {\n  font-size: 20px;\n}\n@media screen and (max-width: 768px) {\n  .panel .infos label[_v-2dea2c39] {\n    font-size: 16px;\n  }\n}\n.panel .infos span[_v-2dea2c39] {\n  font-size: 20px;\n}\n@media screen and (max-width: 768px) {\n  .panel .infos span[_v-2dea2c39] {\n    font-size: 16px;\n  }\n}\n.panel .photo[_v-2dea2c39] {\n  height: 100px;\n  width: 100px;\n  position: absolute;\n  right: 0;\n  top: -50%;\n  border-radius: 50%;\n  overflow: hidden;\n}\n@media screen and (max-width: 768px) {\n  .panel .photo[_v-2dea2c39] {\n    top: -20%;\n  }\n}\n.panel .photo img[_v-2dea2c39] {\n  max-width: 100%;\n  max-height: 100%;\n}\n", ""]);
 
 	// exports
 
@@ -3450,7 +3468,7 @@
 	//             <h4><span class='icon-font'>&#xe616;</span>个人信息 (Personal Info)</h4>
 	//         </div>
 	//         <div class='panel'>
-	//             <div class='photo' v-if='photo'>
+	//             <div class='photo' v-if='photo.show'>
 	//                 <img  src='../header.jpg' />
 	//             </div>
 	//             <div class='infos' v-for='item in basic'>
@@ -3472,21 +3490,31 @@
 	//         display: flex
 	//         flex-flow: row wrap
 	//         position: relative
+	//         @media screen and (max-width: 768px)
+	//             flex-flow: column
 	//         .infos
 	//             width: 50%
 	//             margin: 4px 0
+	//             @media screen and (max-width: 768px)
+	//                 width: 100%
 	//             label
 	//                 font-size: 20px
+	//                 @media screen and (max-width: 768px)
+	//                     font-size: 16px
 	//             span
 	//                 font-size: 20px
+	//                 @media screen and (max-width: 768px)
+	//                     font-size: 16px
 	//         .photo
 	//             height: 100px
 	//             width: 100px
 	//             position: absolute
 	//             right: 0
-	//             top: -80px
+	//             top: -50%
 	//             border-radius: 50%
 	//             overflow: hidden
+	//             @media screen and (max-width: 768px)
+	//                 top: -20%
 	//             img
 	//                 max-width: 100%
 	//                 max-height: 100%
@@ -3497,7 +3525,7 @@
 /* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "\n<div _v-2dea2c39=\"\">\n    <div class=\"title\" _v-2dea2c39=\"\">\n        <h4 _v-2dea2c39=\"\"><span class=\"icon-font\" _v-2dea2c39=\"\"></span>个人信息 (Personal Info)</h4>\n    </div>\n    <div class=\"panel\" _v-2dea2c39=\"\">\n        <div class=\"photo\" v-if=\"photo\" _v-2dea2c39=\"\">\n            <img src=\"" + __webpack_require__(14) + "\" _v-2dea2c39=\"\">\n        </div>\n        <div class=\"infos\" v-for=\"item in basic\" _v-2dea2c39=\"\">\n            <label _v-2dea2c39=\"\">{{ item.des }}: </label>\n            <span _v-2dea2c39=\"\">{{ item.val }}</span>\n        </div>\n    </div>\n</div>\n";
+	module.exports = "\n<div _v-2dea2c39=\"\">\n    <div class=\"title\" _v-2dea2c39=\"\">\n        <h4 _v-2dea2c39=\"\"><span class=\"icon-font\" _v-2dea2c39=\"\"></span>个人信息 (Personal Info)</h4>\n    </div>\n    <div class=\"panel\" _v-2dea2c39=\"\">\n        <div class=\"photo\" v-if=\"photo.show\" _v-2dea2c39=\"\">\n            <img src=\"" + __webpack_require__(14) + "\" _v-2dea2c39=\"\">\n        </div>\n        <div class=\"infos\" v-for=\"item in basic\" _v-2dea2c39=\"\">\n            <label _v-2dea2c39=\"\">{{ item.des }}: </label>\n            <span _v-2dea2c39=\"\">{{ item.val }}</span>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 /* 14 */
@@ -3569,7 +3597,7 @@
 
 
 	// module
-	exports.push([module.id, ".panel .basic[_v-70770133] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.panel span[_v-70770133] {\n  font-size: 20px;\n}\n.panel .courses h5[_v-70770133] {\n  margin: 1em;\n}\n", ""]);
+	exports.push([module.id, ".panel .basic[_v-70770133] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.panel span[_v-70770133] {\n  font-size: 20px;\n}\n@media screen and (max-width: 768px) {\n  .panel span[_v-70770133] {\n    font-size: 16px;\n  }\n}\n.panel .courses h5[_v-70770133] {\n  margin: 1em;\n}\n", ""]);
 
 	// exports
 
@@ -3615,6 +3643,8 @@
 	//             justify-content: space-between
 	//         span
 	//             font-size: 20px
+	//             @media screen and (max-width: 768px)
+	//                 font-size: 16px
 	//         .courses
 	//             h5
 	//                 margin: 1em
@@ -3707,7 +3737,7 @@
 	// <template>
 	//     <div>
 	//         <div class='title'>
-	//             <h4><span class='icon-font'>&#xe61a;</span>工作经历 (work experience)</h4>
+	//             <h4><span class='icon-font'>&#xe61a;</span>工作经历 (Work Experience)</h4>
 	//         </div>
 	//         <div class='panel'>
 	//             <div class='item' v-for='info in work_experience'>
@@ -3749,7 +3779,7 @@
 /* 24 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-59c8e540=\"\">\n    <div class=\"title\" _v-59c8e540=\"\">\n        <h4 _v-59c8e540=\"\"><span class=\"icon-font\" _v-59c8e540=\"\"></span>工作经历 (work experience)</h4>\n    </div>\n    <div class=\"panel\" _v-59c8e540=\"\">\n        <div class=\"item\" v-for=\"info in work_experience\" _v-59c8e540=\"\">\n            <div class=\"basic_info\" _v-59c8e540=\"\">\n                <span _v-59c8e540=\"\">{{ info.duration }}</span>\n                <span _v-59c8e540=\"\">{{ info.company }}</span>\n                <span _v-59c8e540=\"\">{{ info.position }}</span>\n            </div>\n            <ul _v-59c8e540=\"\">\n                <li class=\"detail\" v-for=\"item in info.detail\" _v-59c8e540=\"\">{{ item }}</li>\n            </ul>\n        </div>\n    </div>\n</div>\n";
+	module.exports = "\n<div _v-59c8e540=\"\">\n    <div class=\"title\" _v-59c8e540=\"\">\n        <h4 _v-59c8e540=\"\"><span class=\"icon-font\" _v-59c8e540=\"\"></span>工作经历 (Work Experience)</h4>\n    </div>\n    <div class=\"panel\" _v-59c8e540=\"\">\n        <div class=\"item\" v-for=\"info in work_experience\" _v-59c8e540=\"\">\n            <div class=\"basic_info\" _v-59c8e540=\"\">\n                <span _v-59c8e540=\"\">{{ info.duration }}</span>\n                <span _v-59c8e540=\"\">{{ info.company }}</span>\n                <span _v-59c8e540=\"\">{{ info.position }}</span>\n            </div>\n            <ul _v-59c8e540=\"\">\n                <li class=\"detail\" v-for=\"item in info.detail\" _v-59c8e540=\"\">{{ item }}</li>\n            </ul>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 /* 25 */
@@ -3789,11 +3819,13 @@
 	    value: true
 	});
 	// <template>
-	//     <div class='title'>
-	//         <h4><span class='icon-font'>&#xe70d;</span>校园经历 (School Experience)</h4>
-	//     </div>
 	//     <div>
-	//         <p v-for='info in school_experience'>{{ info }}</p>
+	//         <div class='title'>
+	//             <h4><span class='icon-font'>&#xe70d;</span>校园经历 (School Experience)</h4>
+	//         </div>
+	//         <div>
+	//             <p v-for='info in school_experience'>{{ info }}</p>
+	//         </div>
 	//     </div>
 	// </template>
 	//
@@ -3807,7 +3839,7 @@
 /* 27 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class='title'>\n    <h4><span class='icon-font'>&#xe70d;</span>校园经历 (School Experience)</h4>\n</div>\n<div>\n    <p v-for='info in school_experience'>{{ info }}</p>\n</div>\n";
+	module.exports = "\n<div>\n    <div class='title'>\n        <h4><span class='icon-font'>&#xe70d;</span>校园经历 (School Experience)</h4>\n    </div>\n    <div>\n        <p v-for='info in school_experience'>{{ info }}</p>\n    </div>\n</div>\n";
 
 /***/ },
 /* 28 */
@@ -3847,11 +3879,13 @@
 	    value: true
 	});
 	// <template>
-	//     <div class='title'>
-	//         <h4><span class='icon-font'>&#xe604;</span>专业技能 (skill)</h4>
-	//     </div>
-	//     <div class='panel'>
-	//         {{ skill.join(', ') }}
+	//     <div>
+	//         <div class='title'>
+	//             <h4><span class='icon-font'>&#xe604;</span>专业技能 (Skill)</h4>
+	//         </div>
+	//         <div class='panel'>
+	//             {{ skill.join(', ') }}
+	//         </div>
 	//     </div>
 	// </template>
 	//
@@ -3865,7 +3899,7 @@
 /* 30 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class='title'>\n    <h4><span class='icon-font'>&#xe604;</span>专业技能 (skill)</h4>\n</div>\n<div class='panel'>\n    {{ skill.join(', ') }}\n</div>\n";
+	module.exports = "\n<div>\n    <div class='title'>\n        <h4><span class='icon-font'>&#xe604;</span>专业技能 (Skill)</h4>\n    </div>\n    <div class='panel'>\n        {{ skill.join(', ') }}\n    </div>\n</div>\n";
 
 /***/ },
 /* 31 */
@@ -3905,11 +3939,13 @@
 	    value: true
 	});
 	// <template>
-	//     <div class='title'>
-	//         <h4><span class='icon-font'>&#xe62a;</span>自我评价 (Self Evaluation)</h4>
-	//     </div>
 	//     <div>
-	//         <p>{{ self_evaluation }}</p>
+	//         <div class='title'>
+	//             <h4><span class='icon-font'>&#xe62a;</span>自我评价 (Self Evaluation)</h4>
+	//         </div>
+	//         <div>
+	//             <p>{{ self_evaluation }}</p>
+	//         </div>
 	//     </div>
 	// </template>
 	//
@@ -3923,18 +3959,20 @@
 /* 33 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class='title'>\n    <h4><span class='icon-font'>&#xe62a;</span>自我评价 (Self Evaluation)</h4>\n</div>\n<div>\n    <p>{{ self_evaluation }}</p>\n</div>\n";
+	module.exports = "\n<div>\n    <div class='title'>\n        <h4><span class='icon-font'>&#xe62a;</span>自我评价 (Self Evaluation)</h4>\n    </div>\n    <div>\n        <p>{{ self_evaluation }}</p>\n    </div>\n</div>\n";
 
 /***/ },
 /* 34 */
 /***/ function(module, exports) {
 
 	module.exports = {
-		"photo": true,
+		"photo": {
+			"show": true
+		},
 		"basic": [
 			{
 				"des": "姓名",
-				"val": "showonne"
+				"val": "陈景辉"
 			},
 			{
 				"des": "年龄",
@@ -3959,6 +3997,10 @@
 			{
 				"des": "学历",
 				"val": "本科"
+			},
+			{
+				"des": "专业",
+				"val": "软件工程"
 			},
 			{
 				"des": "联系电话",
@@ -4011,14 +4053,17 @@
 			"Js",
 			"Angular.js"
 		],
-		"selfEvaluation": "我是一个好人 :)"
+		"selfEvaluation": "我是一个好人 :)",
+		"prizeInfo": [
+			"获得过三等奖学金两次"
+		]
 	};
 
 /***/ },
 /* 35 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class='container'>\n    <div class='header_bar'><div class=\"cube\"></div></div>\n    <basic :basic='profileInfo.basic' :photo='profileInfo.photo'></basic>\n    <education :education='profileInfo.education'></education>\n    <work-experience :work_experience='profileInfo.workExperience'></work-experience>\n    <school-experience :school_experience='profileInfo.schoolExperience'></school-experience>\n    <skill :skill='profileInfo.skill'></skill>\n    <self-evaluation :self_evaluation='profileInfo.selfEvaluation'></self-evaluation>\n    <div class='footer_bar'><div class=\"cube\"></div></div>\n</div>\n";
+	module.exports = "\n<div class='container'>\n    <div class='header_bar'><div class=\"cube\"></div></div>\n    <basic :basic='profileInfo.basic' :photo='profileInfo.photo'></basic>\n    <education :education='profileInfo.education'></education>\n    <work-experience :work_experience='profileInfo.workExperience'></work-experience>\n    <school-experience :school_experience='profileInfo.schoolExperience'></school-experience>\n    <skill :skill='profileInfo.skill'></skill>\n    <prize-info :prize_info='profileInfo.prizeInfo'></prize-info>\n    <self-evaluation :self_evaluation='profileInfo.selfEvaluation'></self-evaluation>\n    <div class='footer_bar'><span>powered by <a  target='blank' href=\"https://github.com/showonne/json2profile\">json2profile</a></span><div class=\"cube\"></div></div>\n</div>\n";
 
 /***/ },
 /* 36 */
@@ -4347,7 +4392,7 @@
 
 
 	// module
-	exports.push([module.id, "@font-face {\n  font-family: 'iconfont';\n  src: url(" + __webpack_require__(41) + "); /* IE9*/\n  src: url(" + __webpack_require__(41) + "?#iefix) format('embedded-opentype'), url(" + __webpack_require__(42) + ") format('woff'), url(" + __webpack_require__(43) + ") format('truetype'), url(" + __webpack_require__(44) + "#iconfont) format('svg'); /* iOS 4.1- */\n}\n.icon-font {\n  font-family: 'iconfont';\n  display: inline-block;\n  height: 30px;\n  width: 42px;\n}\n.title h4 {\n  color: #254763;\n  font-size: 30px;\n  margin: 1.3em 0;\n}\n.title h4 span {\n  margin-right: 10px;\n}\n", ""]);
+	exports.push([module.id, "@font-face {\n  font-family: 'iconfont';\n  src: url(" + __webpack_require__(41) + "); /* IE9*/\n  src: url(" + __webpack_require__(41) + "?#iefix) format('embedded-opentype'), url(" + __webpack_require__(42) + ") format('woff'), url(" + __webpack_require__(43) + ") format('truetype'), url(" + __webpack_require__(44) + "#iconfont) format('svg'); /* iOS 4.1- */\n}\n@media screen and (max-width: 768px) {\n  html {\n    padding: 0 4px;\n  }\n}\np::selection,\nspan::selection,\nh1::selection,\nh2::selection,\nh3::selection,\nh4::selection,\nh5::selection,\nh6::selection,\ndiv::selection,\nlabel::selection,\na::selection,\nli::selection {\n  color: #fff;\n  background: #254763;\n}\n.icon-font {\n  font-family: 'iconfont';\n  display: inline-block;\n  height: 30px;\n  width: 42px;\n}\n@media screen and (max-width: 768px) {\n  .icon-font {\n    width: 30px;\n  }\n}\n.title h4 {\n  color: #254763;\n  font-size: 30px;\n  margin: 1.3em 0;\n}\n@media screen and (max-width: 768px) {\n  .title h4 {\n    font-size: 18px;\n    font-weight: 800;\n  }\n}\n.title h4 span {\n  margin-right: 10px;\n}\n@media screen and (max-width: 768px) {\n  .title h4 span {\n    margin-right: 4px;\n  }\n}\n", ""]);
 
 	// exports
 
@@ -4375,6 +4420,70 @@
 /***/ function(module, exports) {
 
 	module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiID4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8bWV0YWRhdGE+CkNyZWF0ZWQgYnkgRm9udEZvcmdlIDIwMTIwNzMxIGF0IFdlZCBKdW4gIDggMTA6MzQ6NDMgMjAxNgogQnkgYWRtaW4KPC9tZXRhZGF0YT4KPGRlZnM+Cjxmb250IGlkPSJpY29uZm9udCIgaG9yaXotYWR2LXg9IjEwMjQiID4KICA8Zm9udC1mYWNlIAogICAgZm9udC1mYW1pbHk9Imljb25mb250IgogICAgZm9udC13ZWlnaHQ9IjUwMCIKICAgIGZvbnQtc3RyZXRjaD0ibm9ybWFsIgogICAgdW5pdHMtcGVyLWVtPSIxMDI0IgogICAgcGFub3NlLTE9IjIgMCA2IDMgMCAwIDAgMCAwIDAiCiAgICBhc2NlbnQ9Ijg5NiIKICAgIGRlc2NlbnQ9Ii0xMjgiCiAgICB4LWhlaWdodD0iNzkyIgogICAgYmJveD0iMCAtMTI4IDE0NTQgODk1IgogICAgdW5kZXJsaW5lLXRoaWNrbmVzcz0iNTAiCiAgICB1bmRlcmxpbmUtcG9zaXRpb249Ii0xMDAiCiAgICB1bmljb2RlLXJhbmdlPSJVKzAwNzgtRTcwRCIKICAvPgo8bWlzc2luZy1nbHlwaCBob3Jpei1hZHYteD0iMzc0IiAKZD0iTTM0IDB2NjgyaDI3MnYtNjgyaC0yNzJ6TTY4IDM0aDIwNHY2MTRoLTIwNHYtNjE0eiIgLz4KICAgIDxnbHlwaCBnbHlwaC1uYW1lPSIubm90ZGVmIiBob3Jpei1hZHYteD0iMzc0IiAKZD0iTTM0IDB2NjgyaDI3MnYtNjgyaC0yNzJ6TTY4IDM0aDIwNHY2MTRoLTIwNHYtNjE0eiIgLz4KICAgIDxnbHlwaCBnbHlwaC1uYW1lPSIubnVsbCIgaG9yaXotYWR2LXg9IjAiIAogLz4KICAgIDxnbHlwaCBnbHlwaC1uYW1lPSJub25tYXJraW5ncmV0dXJuIiBob3Jpei1hZHYteD0iMzQxIiAKIC8+CiAgICA8Z2x5cGggZ2x5cGgtbmFtZT0ieCIgdW5pY29kZT0ieCIgaG9yaXotYWR2LXg9IjEwMDEiIApkPSJNMjgxIDU0M3EtMjcgLTEgLTUzIC0xaC04M3EtMTggMCAtMzYuNSAtNnQtMzIuNSAtMTguNXQtMjMgLTMydC05IC00NS41di03Nmg5MTJ2NDFxMCAxNiAtMC41IDMwdC0wLjUgMThxMCAxMyAtNSAyOXQtMTcgMjkuNXQtMzEuNSAyMi41dC00OS41IDloLTEzM3YtOTdoLTQzOHY5N3pNOTU1IDMxMHYtNTJxMCAtMjMgMC41IC01MnQwLjUgLTU4dC0xMC41IC00Ny41dC0yNiAtMzB0LTMzIC0xNnQtMzEuNSAtNC41cS0xNCAtMSAtMjkuNSAtMC41CnQtMjkuNSAwLjVoLTMybC00NSAxMjhoLTQzOWwtNDQgLTEyOGgtMjloLTM0cS0yMCAwIC00NSAxcS0yNSAwIC00MSA5LjV0LTI1LjUgMjN0LTEzLjUgMjkuNXQtNCAzMHYxNjdoOTExek0xNjMgMjQ3cS0xMiAwIC0yMSAtOC41dC05IC0yMS41dDkgLTIxLjV0MjEgLTguNXExMyAwIDIyIDguNXQ5IDIxLjV0LTkgMjEuNXQtMjIgOC41ek0zMTYgMTIzcS04IC0yNiAtMTQgLTQ4cS01IC0xOSAtMTAuNSAtMzd0LTcuNSAtMjV0LTMgLTE1dDEgLTE0LjUKdDkuNSAtMTAuNXQyMS41IC00aDM3aDY3aDgxaDgwaDY0aDM2cTIzIDAgMzQgMTJ0MiAzOHEtNSAxMyAtOS41IDMwLjV0LTkuNSAzNC41cS01IDE5IC0xMSAzOWgtMzY4ek0zMzYgNDk4djIyOHEwIDExIDIuNSAyM3QxMCAyMS41dDIwLjUgMTUuNXQzNCA2aDE4OHEzMSAwIDUxLjUgLTE0LjV0MjAuNSAtNTIuNXYtMjI3aC0zMjd6IiAvPgogICAgPGdseXBoIGdseXBoLW5hbWU9InVuaUU2MDQiIHVuaWNvZGU9IiYjeGU2MDQ7IiAKZD0iTTM5NCAyMDhsMiAxMTVxMCA5IC03IDE1LjV0LTE3IDYuNWwyIDE3NGwxMSA0M2wtOSA4N2wtNDkgMWwtMTEgLTg3bDEwIC00M2wtMyAtMTc0cS0xMCAwIC0xNy41IC02dC03LjUgLTE1bC0xIC0xMTZxLTI1IC0xMiAtMjUgLTM2bC0zIC0xNzRxMCAtMTggMTQgLTMxdDM0IC0xM2w0OSAtMXEyMCAwIDM0LjUgMTIuNXQxNS41IDMwLjVsMiAxNzRxMCAyMyAtMjQgMzd6TTc1MiA1MTNxMSAzNCAtMTEuNSA3Mi41dC0zMi41IDU4LjUKcS0xNyAwIC0xNyAtMTdsLTEgLTkxcTAgLTkgLTYuNSAtMTUuNXQtMTQuNSAtNS41bC0xMjYgMXEtOCAxIC0xNC41IDd0LTUuNSAxNXExIDc0IDEgOTJxMCA3IC00IDExLjV0LTkgNS41aC00cS0yMCAtMTkgLTMzLjUgLTU3LjV0LTEzLjUgLTcyLjVxLTIgLTgxIDgyIC0xMDJsLTYgLTQwMnEwIC0yNSAxNi41IC00My41dDQxLjUgLTE4LjVoOHEyNCAwIDQxLjUgMTcuNXQxNy41IDQyLjVsNiA0MDJxODQgMTkgODUgMTAweiIgLz4KICAgIDxnbHlwaCBnbHlwaC1uYW1lPSJ1bmlFNjE2IiB1bmljb2RlPSImI3hlNjE2OyIgaG9yaXotYWR2LXg9IjE0NTUiIApkPSJNNzMyIDUzNGg1NDdxMTEgMCAxOC41IDguNXQ3LjUgMjF0LTcuNSAyMXQtMTguNSA4LjVoLTU0N3EtMTEgMCAtMTguNSAtOC41dC03LjUgLTIxdDcuNSAtMjF0MTguNSAtOC41djB6TTczMiAzMzloNDAwcTExIDAgMTkgOC41dDggMjAuNXQtOCAyMXQtMTkgOWgtNDAwcS0xMSAwIC0xOC41IC05dC03LjUgLTIxdDcuNSAtMjAuNXQxOC41IC04LjV2MHpNMTQ1NCA3NDNxMCA2MyAtNDQuNSAxMDcuNXQtMTA3LjUgNDQuNWgtMTMwMnYtODcxCnEwIC02MyA0NC41IC0xMDcuNXQxMDcuNSAtNDQuNWgzMDRoNjhoODE5djBxMTMgMCAyMiA5LjV0OSAyMS41cTAgMTQgLTkuNSAyMi41dC0yMS41IDguNXYwaC0xMTg4cS0zNiAwIC02MSAyNnQtMjUgNjF2ODEyaDEyMzZxMzcgMCA2MiAtMjUuNXQyNSAtNjEuNXYtNzA5djBxMCAtMTQgOS41IC0yMi41dDIxLjUgLTguNXQyMS41IDkuNXQ5LjUgMjEuNXYwdjcwNnYwek00MTcgMzYwcTY1IDAgMTExIDQ2LjV0NDYgMTExLjV0LTQ2IDExMS41CnQtMTExLjUgNDYuNXQtMTExLjUgLTQ2LjV0LTQ2IC0xMTEuNXQ0NiAtMTExLjV0MTEyIC00Ni41djB6TTQxNyA0MDZxLTQ3IDAgLTc5LjUgMzN0LTMyLjUgNzl0MzIuNSA3OXQ3OSAzM3Q3OSAtMzN0MzIuNSAtNzl0LTMyLjUgLTc5dC03OC41IC0zM3Ywek0xNTYgMTc4di0yM2gyM2gyMzJoMjU3aDIzdjIzcTAgNDQgLTIxIDg1LjV0LTU5IDczLjVxLTgwIDcwIC0xODggNzBxLTEyIDAgLTI1IC0xcS0xMCAtMSAtMTYgLTguNXQtNSAtMTcKdDggLTE1LjV0MTcgLTV0MjEgMXE0NiAwIDg4IC0xNS41dDcwIC00Mi41bDExIC0xMWwxMCAtMTBsOCAtOHE3IC03IDguNSAtOXQ2LjUgLTguNXQ2IC05LjV0NC41IC05LjV0NC41IC0xMS41dDIuNSAtMTEuNXQyLjUgLTEzLjVoLTIzNGgtMjA5cTQgNDAgMzEgNzQuNXQ3NiA1OC41cTkgNSAxMiAxNHQtMS41IDE3LjV0LTEzLjUgMTEuNXQtMTggLTJxLTYxIC0zMCAtOTYuNSAtODN0LTM1LjUgLTExNHoiIC8+CiAgICA8Z2x5cGggZ2x5cGgtbmFtZT0idW5pRTYxQSIgdW5pY29kZT0iJiN4ZTYxYTsiIApkPSJNODYzIDY0MGgtMTE4djQ1cTAgNDMgLTMwIDczdC03MyAzMGgtMjYwcS00MyAwIC03MyAtMzB0LTMwIC03M3YtNDVoLTExOHEtNDMgMCAtNzMgLTMwLjV0LTMwIC03Mi41di00NTNxMCAtNDMgMzAgLTczdDczIC0zMGg3MDJxNDMgMCA3MyAzMHQzMCA3M3Y0NTNxMCA0MiAtMzAgNzIuNXQtNzMgMzAuNXpNMzQwIDY4NXEwIDE3IDEyLjUgMjkuNXQyOS41IDEyLjVoMjYwcTE3IDAgMjkuNSAtMTIuNXQxMi41IC0yOS41di00NWgtMzQ0djQ1egpNMTYxIDU3OGg3MDJxMTcgMCAyOS41IC0xMnQxMi41IC0yOXYtMTczaC0xMjVxMCAxOCAtMTMuNSAzMXQtMzEuNSAxM3EtMTkgMCAtMzIgLTEzdC0xNCAtMzFoLTM1NHEtMSAxOCAtMTQgMzF0LTMyIDEzcS0xOCAwIC0zMS41IC0xM3QtMTMuNSAtMzFoLTEyNXYxNzNxMCAxNyAxMi41IDI5dDI5LjUgMTJ6TTg2MyA0MmgtNzAycS0xNyAwIC0yOS41IDEyLjV0LTEyLjUgMjkuNXYyMThoMTI1di00NHEwIC0xOSAxMy41IC0zMi41dDMxLjUgLTEzLjUKcTE5IDAgMzIuNSAxMy41dDEzLjUgMzIuNXY0NGgzNTR2LTQ0cTAgLTE5IDEzLjUgLTMyLjV0MzIuNSAtMTMuNXExOCAwIDMxLjUgMTMuNXQxMy41IDMyLjV2NDRoMTI1di0yMThxMCAtMTcgLTEyLjUgLTI5LjV0LTI5LjUgLTEyLjV6IiAvPgogICAgPGdseXBoIGdseXBoLW5hbWU9InVuaUU2MkEiIHVuaWNvZGU9IiYjeGU2MmE7IiAKZD0iTTUxMiA4MTRxLTk1IDAgLTE4MSAtMzd0LTE0OC41IC05OXQtOTkgLTE0OC41dC0zNi41IC0xODF0MzYuNSAtMTgwLjV0OTkgLTE0OC41dDE0OC41IC05OS41dDE4MSAtMzd0MTgxIDM3dDE0OC41IDk5LjV0OTkgMTQ4LjV0MzYuNSAxODAuNXQtMzYuNSAxODF0LTk5IDE0OC41dC0xNDguNSA5OXQtMTgxIDM3ek01MTIgLTcwcS0xMTQgMCAtMjEwLjUgNTZ0LTE1Mi41IDE1Mi41dC01NiAyMTAuNXQ1NiAyMTAuNXQxNTIuNSAxNTIuNQp0MjEwLjUgNTZ0MjEwLjUgLTU2dDE1Mi41IC0xNTIuNXQ1NiAtMjEwLjV0LTU2IC0yMTAuNXQtMTUyLjUgLTE1Mi41dC0yMTAuNSAtNTZ6TTc3NSA0NzBsLTE2MSAxNWwtODYgMTU1cS01IDExIC0xNi41IDExdC0xNS41IC0xMWwtODcgLTE1NWwtMTYwIC0xNXEtMTIgLTEgLTE1LjUgLTEzLjV0NS41IC0yMC41bDEyNiAtMTMzbC00MyAtMTg3cS0zIC0xMiA2LjUgLTE5LjV0MTkuNSAtMS41bDE2NCAxMDNsMTY1IC0xMDNxNCAtMiA5IC0ydDEwIDMKcTkgOCA3IDIwbC00NSAxODhsMTI3IDEzMnE5IDggNS41IDIwLjV0LTE1LjUgMTMuNXpNNzE3IDQxN2wtOTYgLTEwNGwzNCAtMTMzcTIgLTkgLTUgLTE1cS0zIC0zIC04IC0zcS0zIDAgLTYgMmwtMTI1IDc3bC0xMjIgLTc3cS04IC00IC0xNSAxLjV0LTUgMTQuNWwzMyAxMzNsLTk1IDEwNHEtNyA2IC00IDE1dDEyIDEwbDExMSAxNWw3NCAxMTZxMyA5IDEyIDl0MTIgLTlsNzMgLTExNmwxMTIgLTE1cTkgLTEgMTIgLTEwdC00IC0xNXoiIC8+CiAgICA8Z2x5cGggZ2x5cGgtbmFtZT0idW5pRTYzQyIgdW5pY29kZT0iJiN4ZTYzYzsiIApkPSJNMTAyNCA1MDdsLTUxNiAyNDZsLTUwOCAtMjUybDIyOSAtMTEzdi0yNjZsMTEgLTlxNiAtNCAxNS41IC0xMC41dDM3LjUgLTIydDU4IC0yN3Q3My41IC0yMnQ4Ni41IC0xMS41aDlxNDIgMCA4My41IDkuNXQ2OC41IDIxLjV0NTIgMjd0MzMuNSAyMnQxMy41IDExbDkgOXYyNjV6TTUwOCA2ODhsMzg0IC0xODJsLTM4NCAtMTkybC0zNzcgMTg3ek03MjIgMTQ2cS0xOSAtMTQgLTQyLjUgLTI3LjV0LTcxLjUgLTI3LjV0LTk2IC0xMwpxLTExOCAzIC0yMjUgNzR2MjA3bDIyMSAtMTEwbDIxNCAxMDd2LTIxMHpNMzYgMzUwaDU4di0yMjFoLTU4djIyMXpNNzAyIDUzOWwtMTQ5IDcybC0xMyAtMjZsMTQ5IC03MnpNNzM2IDUyMWwyOSAtMTVsLTEzIC0yNmwtMjkgMTV6IiAvPgogICAgPGdseXBoIGdseXBoLW5hbWU9InVuaUU3MEQiIHVuaWNvZGU9IiYjeGU3MGQ7IiAKZD0iTTU0NCA2NDB2LTY0MHExOCAxOCAzMi41IDI5LjV0NDQgMjkuNXQ3MSAyNy41dDkyLjUgOS41cTEwNyAwIDE5OCAtMzBxNSAtMiAxMCAtMnExMCAwIDE5IDZxMTMgMTAgMTMgMjZ2NTc2cTAgMTQgLTEwIDI0cS0zNCAzMSAtOTkuNSA1MS41dC0xMzAuNSAyMC41cS00MSAwIC03Ny41IC05LjV0LTY2IC0yOHQtNDQuNSAtMzB0LTM1IC0zMS41cS02IC00IC03IC01cS0xMCAtMTAgLTEwIC0yNHpNNDgwIDY0MHYtNjQwCnEtMTggMTggLTMyLjUgMjkuNXQtNDQgMjkuNXQtNzEgMjcuNXQtOTIuNSA5LjVxLTEwNyAwIC0xOTggLTMwcS01IC0yIC0xMCAtMnEtMTAgMCAtMTkgNnEtMTMgMTAgLTEzIDI2djU3NnEwIDE0IDEwIDI0cTM0IDMxIDk5LjUgNTEuNXQxMzAuNSAyMC41cTQxIDAgNzcuNSAtOS41dDY2IC0yOHQ0NC41IC0zMHQzNSAtMzEuNXE1IC00IDcgLTVxMTAgLTEwIDEwIC0yNHoiIC8+CiAgPC9mb250Pgo8L2RlZnM+PC9zdmc+Cg=="
+
+/***/ },
+/* 45 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__vue_script__ = __webpack_require__(48)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/components/prizeInfo.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(49)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./prizeInfo.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 46 */,
+/* 47 */,
+/* 48 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	// <template>
+	//     <div>
+	//         <div class='title'>
+	//             <h4><span class='icon-font'>&#xe62a;</span>获奖情况 (Prize info)</h4>
+	//         </div>
+	//         <div class='panel'>
+	//             <ul>
+	//                 <li v-for='info in prize_info'>{{ info }}</li>
+	//             </ul>
+	//         </div>
+	//     </div>
+	// </template>
+	//
+	// <script>
+	exports.default = {
+	    props: ['prize_info']
+	};
+	// </script>
+
+/***/ },
+/* 49 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div>\n    <div class='title'>\n        <h4><span class='icon-font'>&#xe62a;</span>获奖情况 (Prize info)</h4>\n    </div>\n    <div class='panel'>\n        <ul>\n            <li v-for='info in prize_info'>{{ info }}</li>\n        </ul>\n    </div>\n</div>\n";
 
 /***/ }
 /******/ ]);

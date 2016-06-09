@@ -6,16 +6,31 @@
     url('../icon_fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
     url('../icon_fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
 
+html
+    @media screen and (max-width: 768px)
+        padding: 0 4px
+        
+p, span, h1, h2, h3, h4, h5, h6, div, label, a, li
+    &::selection
+        color: #fff
+        background: #254763
+
 .icon-font
     font-family: 'iconfont'
     display: inline-block
     height: 30px
     width: 42px
-
+    @media screen and (max-width: 768px)
+        width: 30px
 .title
     h4
         color: #254763
         font-size: 30px
         margin: 1.3em 0
+        @media screen and (max-width: 768px)
+            font-size: 18px
+            font-weight: 800
         span
             margin-right: 10px
+            @media screen and (max-width: 768px)
+                margin-right: 4px

@@ -30,6 +30,8 @@
             justify-content: space-between
         span
             font-size: 20px
+            @media screen and (max-width: 768px)
+                font-size: 16px
         .courses
             h5
                 margin: 1em
